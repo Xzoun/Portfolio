@@ -1,0 +1,159 @@
+/* ------------------------------- General ------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
+
+* {
+    font-family: Inter, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    height: 3000vh;
+}
+
+.sector {
+    padding: 10vh 5vw 0 5vw;
+    height: 90vh;
+}
+
+.general {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+/* ------------------------------- Inicio Smooth | Background */
+#start {
+    opacity: 0;
+}
+
+#fondo {
+    background: Linear-gradient(150deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.2) 30%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 0.2) 70%,
+            rgba(1, 0, 0, 0.3) 100%);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
+
+/* ------------------------------- Scroll Bar ------------------------------- */
+body::-webkit-scrollbar,
+#descripcion::-webkit-scrollbar,
+#notasFunc::-webkit-scrollbar {
+    width: 12px;
+    height: 0px;
+    margin-right: 3px;
+    background-color: #2e2e2e;
+}
+
+body:hover::-webkit-scrollbar-thumb,
+#descripcion:hover::-webkit-scrollbar-thumb,
+#notasFunc::-webkit-scrollbar-thumb {
+    background-color: rgb(192, 192, 192);
+    border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+#descripcion::-webkit-scrollbar-thumb:hover,
+#notasFunc::-webkit-scrollbar-thumb:hover {
+    width: 7px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------- Proyectos ------------------------------- */
+#proyectos {
+    height: 60vh;
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------------------------- Tarjeta */
+.cardProject {
+    min-width: 20vw;
+    background: rgba(255, 192, 203);
+    background: radial-gradient(circle, rgba(255, 192, 203) 0%,
+            rgba(255, 192, 203, 0.3)32%,
+            rgba(255, 192, 203, 0.6) 50%,
+            rgba(255, 192, 203, 0)100%);
+    border-radius: 8px;
+    padding: 1vh 1vw;
+    max-height: 50vh;
+}
+
+/* ------------------------------- Descripción | Nombre | Foto */
+.descripcionProject {
+    display: none;
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    top: 10vh;
+    right: 0;
+    width: 40vw;
+    padding: 1vh 0 1vh 1vh;
+}
+
+.imgContainerProject {
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 70%;
+}
+
+.imgProject {
+    width: 100%;
+}
+
+/* ------------------------------- Links */
+.linkContainerProject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.linkProject {
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 8px;
+    border: 3px solid black;
+    color: black;
+}
+
+.linkGitHubProject {
+    height: 8vh;
+}
+
+a:hover,
+.playBtn:hover {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* ------------------------------- Audio */
+.audioProject {
+    display: none;
+}
+
+.playBtn {
+    height:30px;
+    width:30px;
+    border: solid 2px black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

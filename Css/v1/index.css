@@ -1,25 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Kanit:wght@100;300;700&display=swap');
 
 /* ----------------- General ----------------- */
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
 body {
     font-family: 'Kanit', sans-serif;
     background-color: white;
     width: 100%;
     overflow-x: hidden;
-
-
 }
-
-/* body::before {
-    content: "";
-    background-image: url("../imagenes/Fondo.jpg");
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -20;
-} */
 
 a {
     text-decoration: none;
@@ -81,7 +74,7 @@ body.Dark .educacion .link-dark {
 }
 
 .logoPersonal {
-    height: 30px;
+    height: 35px;
     width: 35px;
 }
 
@@ -254,6 +247,14 @@ h1 {
     display: flex;
     gap: 30px;
     justify-content: space-between;
+    padding: 2% 0;
+    margin: 0 5%;
+}
+
+.design {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     padding: 2% 0;
     margin: 0 5%;
 }

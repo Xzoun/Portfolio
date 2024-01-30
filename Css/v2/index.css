@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
+
+* {
+    font-family: Inter, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    color: black;
+    max-width: 100vw;
+    max-height: 100vh;
+    background: Linear-gradient(150deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.2) 30%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 0.2) 70%,
+            rgba(1, 0, 0, 0.3) 100%);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------------------ Presentacion | Primera vista ------------------------------------------*/
+/* Fondo Para efecto */
+
+#fondo {
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Fondo Para efecto */
+#presentacion {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+
+    background: Linear-gradient(150deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.2) 30%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 0.2) 70%,
+            rgba(1, 0, 0, 0.3) 100%);
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+}
+
+/* Foto de perfil */
+#presentacion #perfil {
+    max-height: 80vh;
+    z-index: -10;
+}
+
+#perfilContainer {
+    height: 80vh;
+    width: 80vw;
+}
+
+/* Container descripción perfil */
+#bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    left: 6vw;
+    gap: 2vw;
+    width: 94vw;
+    max-height: 100vh;
+    padding: 8vh 0;
+}
+
+/* Container interno */
+#descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10vh;
+    height: 100vh;
+}
+
+#descripcion h2,
+#descripcion h3,
+#descripcion h4 {
+    width: fit-content;
+}
+
+#descripcion h1 {
+    font-weight: 800;
+}
+
+/* Botones */
+#botones {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
+
+.button {
+    border-radius: 8px;
+    padding: 1% 5%;
+    cursor: pointer;
+    border: 3px solid black;
+    opacity: 0;
+}
+
+.button:hover {
+    border: black 3px dotted;
+}
+
+#descargar div.button:hover img {
+    filter: invert(0);
+}
+
+#descargar {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+#iniciar,
+#descargarBtn {
+    background-color: rgba(0, 0, 0, 0);
+    border: black solid 3px;
+    font-weight: 800;
+    width: max-content;
+}
+
+#iniciar:hover {
+    border: black 3px dotted;
+}
+
+.iniciar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------------------------------------ Animacion | Fondo ------------------------------------------*/
+
+.bola {
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    z-index: -20;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -20;
+}
+
+/*------------------------------------------ Responsive ------------------------------------------*/
+
+@media (max-width:1600px) {
+    #presentacion img {
+        max-width: 50%;
+        max-height: 80vh;
+    }
+}
+@media (max-width:1100px) {
+    #perfilContainer {
+        height: 65vh;
+        width: 60vw;
+    }
+}
+@media (max-width:796px) {
+
+    #bienvenida {
+        margin: 2vh 2vw;
+        padding: 2vh 2vw;
+        width: 92vw;
+        height: 92vh;
+    }
+
+    #perfil,
+    #perfilContainer {
+        display: none;
+    }
+
+    #presentacion::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../../Imagenes/v2/conexion.png") center center/cover no-repeat;
+        background-repeat: no-repeat;
+        z-index: -2;
+    }
+
+    #botones {
+        gap: 20vw;
+    }
+
+    .bola,
+    svg {
+        display: none;
+    }
+
+}
+
+@media (max-width:500px) {
+    #presentacion {
+        top: 0;
+        left: 0;
+        height: 94vh;
+        overflow: hidden;
+        width: 100vw;
+    }
+
+    #fondo {
+        height: 83vh;
+        overflow: hidden;
+    }
+
+    #bienvenida {
+        width: 80vw;
+    }
+
+    #perfil {
+        display: none;
+    }
+
+    #presentacion::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../../Imagenes/v2/conexion.png") center center/cover no-repeat;
+        background-repeat: no-repeat;
+        z-index: -2;
+    }
+
+    .bola,
+    svg {
+        display: none;
+    }
+
+}
