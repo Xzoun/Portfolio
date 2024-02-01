@@ -1,0 +1,52 @@
+/* ------------------- Tecnologías */
+div.skills {
+    padding: 10vh 10vw;
+    overflow: hidden;
+    position: relative;
+    height: 60px;
+}
+
+div.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 10vw;
+    top: 20vh;
+    opacity: 0;
+}
+
+div.skill img {
+    width: 25px;
+    height: 25px;
+}
+
+/* ------------------- Otras Skills */
+#otrasSkills {
+    padding: 10vh 10vw;
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+div.otrasSkills {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: 20px;
+}
+
+div.otraSkill {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+}
+
+div.otrasSkills img {
+    width: 40px;
+}

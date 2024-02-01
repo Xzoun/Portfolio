@@ -103,8 +103,6 @@ for (let i = 0; i < bolasTotales; i++) {
     bola.style.width = `${diametro}px`;
     bola.style.height = `${diametro}px`;
 
-    bola.style.backgroundColor = "black";
-
     // Establecemos el centro del objeto y lo guardamos en el array posiciones
     posicion.x += pixelsToVW(diametro / 2);
     posicion.y += pixelsToVH(diametro / 2);
@@ -116,6 +114,7 @@ for (let i = 0; i < bolasTotales; i++) {
 for (let i = 0; i < posiciones.length - 1; i++) {
     //Creo las uniones entre los puntos usando el array que contiene los centros 
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const color = " rgb(100, 100, 100)";
 
     // Coordinación de las bifurcaciones para que se dibujen solo lineas específicas.
     switch (i) {
@@ -126,7 +125,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea1.setAttribute("y1", `${posiciones[i].y}vh`);
             linea1.setAttribute("x2", `${posiciones[i + 1].x}vw`);
             linea1.setAttribute("y2", `${posiciones[i + 1].y}vh`);
-            linea1.setAttribute("stroke", "black");
+            linea1.setAttribute("stroke", `${color}`);
             linea1.setAttribute("stroke-width", "1");
             svg.appendChild(linea1);
             document.body.appendChild(svg);
@@ -137,7 +136,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea2.setAttribute("y1", `${posiciones[i].y}vh`);
             linea2.setAttribute("x2", `${posiciones[i + 2].x}vw`);
             linea2.setAttribute("y2", `${posiciones[i + 2].y}vh`);
-            linea2.setAttribute("stroke", "black");
+            linea2.setAttribute("stroke", `${color}`);
             linea2.setAttribute("stroke-width", "1");
 
             svg.appendChild(linea2);
@@ -153,7 +152,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea3.setAttribute("y1", `${posiciones[i].y}vh`);
             linea3.setAttribute("x2", `${posiciones[i + 1].x}vw`);
             linea3.setAttribute("y2", `${posiciones[i + 1].y}vh`);
-            linea3.setAttribute("stroke", "black");
+            linea3.setAttribute("stroke", `${color}`);
             linea3.setAttribute("stroke-width", "1");
             svg.appendChild(linea3);
             document.body.appendChild(svg);
@@ -164,7 +163,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea4.setAttribute("y1", `${posiciones[i].y}vh`);
             linea4.setAttribute("x2", `${posiciones[i + 3].x}vw`);
             linea4.setAttribute("y2", `${posiciones[i + 3].y}vh`);
-            linea4.setAttribute("stroke", "black");
+            linea4.setAttribute("stroke", `${color}`);
             linea4.setAttribute("stroke-width", "1");
             svg.appendChild(linea4);
             document.body.appendChild(svg);
@@ -176,7 +175,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea5.setAttribute("y1", `${posiciones[i].y}vh`);
             linea5.setAttribute("x2", `${posiciones[i + 1].x}vw`);
             linea5.setAttribute("y2", `${posiciones[i + 1].y}vh`);
-            linea5.setAttribute("stroke", "black");
+            linea5.setAttribute("stroke", `${color}`);
             linea5.setAttribute("stroke-width", "1");
             svg.appendChild(linea5);
             document.body.appendChild(svg);
@@ -187,7 +186,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea6.setAttribute("y1", `${posiciones[i].y}vh`);
             linea6.setAttribute("x2", `${posiciones[i + 5].x}vw`);
             linea6.setAttribute("y2", `${posiciones[i + 5].y}vh`);
-            linea6.setAttribute("stroke", "black");
+            linea6.setAttribute("stroke", `${color}`);
             linea6.setAttribute("stroke-width", "1");
             svg.appendChild(linea6);
             document.body.appendChild(svg);
@@ -202,7 +201,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea7.setAttribute("y1", `${posiciones[i].y}vh`);
             linea7.setAttribute("x2", `${posiciones[i + 1].x}vw`);
             linea7.setAttribute("y2", `${posiciones[i + 1].y}vh`);
-            linea7.setAttribute("stroke", "black");
+            linea7.setAttribute("stroke", `${color}`);
             linea7.setAttribute("stroke-width", "1");
             svg.appendChild(linea7);
             document.body.appendChild(svg);
@@ -217,7 +216,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea8.setAttribute("y1", `${posiciones[i].y}vh`);
             linea8.setAttribute("x2", `${posiciones[i + 1].x}vw`);
             linea8.setAttribute("y2", `${posiciones[i + 1].y}vh`);
-            linea8.setAttribute("stroke", "black");
+            linea8.setAttribute("stroke", `${color}`);
             linea8.setAttribute("stroke-width", "1");
             svg.appendChild(linea8);
             document.body.appendChild(svg);
@@ -232,7 +231,7 @@ for (let i = 0; i < posiciones.length - 1; i++) {
             linea.setAttribute("y1", `${posiciones[i].y}vh`);
             linea.setAttribute("x2", `${posiciones[i + 1].x}vw`);
             linea.setAttribute("y2", `${posiciones[i + 1].y}vh`);
-            linea.setAttribute("stroke", "black");
+            linea.setAttribute("stroke", `${color}`);
             linea.setAttribute("stroke-width", "1");
             svg.appendChild(linea);
             document.body.appendChild(svg);
@@ -255,8 +254,8 @@ timelineBolas
     .to(".bola7", { duration: 1, opacity: 1 }, "-=3")
     .to(".bola8", { duration: 1, opacity: 1 }, "-=2")
     .to(".bola9", { duration: 1, opacity: 1 }, "+=1")
-    .to(".bola10", { duration: 1, opacity: 1 },"-=2")
-    .to(".bola11", { duration: 1, opacity: 1 },"-=2");
+    .to(".bola10", { duration: 1, opacity: 1 }, "-=2")
+    .to(".bola11", { duration: 1, opacity: 1 }, "-=2");
 
 const lineas = document.querySelectorAll('.linea');
 const timeline = gsap.timeline();

@@ -1,0 +1,88 @@
+* {
+    font-family: Inter, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#controlador {
+    position: fixed;
+    bottom: 10vh;
+    left: 20vw;
+    height: 10vh;
+    width: 60vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    border-radius: 50px;
+    background: rgb(255, 249, 172);
+    background: radial-gradient(circle, rgb(255, 249, 172) 0%,
+            rgb(255, 249, 172, 0.3) 32%,
+            rgb(255, 249, 172, 0.6) 50%,
+            rgb(255, 249, 172)100%);
+    z-index: 1000;
+    opacity: 0;
+}
+
+#controlador h2 {
+    color: black;
+}
+
+.logo {
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo:hover {
+    filter: invert(1);
+    background-color: white;
+
+}
+
+.span {
+    position: absolute;
+    width: fit-content;
+    background-color: rgba(255, 255, 255);
+    visibility: hidden;
+    padding: 10px;
+    width: max-content;
+    border-radius: 12px;
+}
+
+.logo:hover .span {
+    visibility: visible;
+    top: -55px;
+}
+
+@media (max-width : 768px) {
+
+    #controlador {
+        top: 10vh;
+        left: 85vw;
+        height: 60vh;
+        width: 10vw;
+
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .logo:hover span {
+        visibility: visible;
+        left: -15vw;
+        top: auto;
+    }
+
+    #controlador h2 {
+        visibility: hidden;
+    }
+
+
+}
