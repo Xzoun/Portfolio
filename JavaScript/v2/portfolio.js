@@ -22,12 +22,36 @@ gsap.to(controlador, { scrollTrigger: { trigger: controlador, start: "top top", 
 
 // Seguir trabajando en la corrección del error al hacer click (Hacia arriba)en un boton del controlador
 // Este código sólo lo corrige al ir para abajo...
+// ------------- Se me ocurre verificar la posicion del scroll 
+// ------------- si es mayor o igual a la posicion del div al que quiero ir
+// ------------- que redireccione a un id en una etiqueta de más arriba
 botones.forEach((boton) => {
     boton.addEventListener("click", () => {
-        animacionesSector.forEach((animacion) => {
-            animacion.style.opacity = 1;
 
-        })
+        if (boton.classList.contains("uno")) {
+            gsap.to(window, { scrollTo: "#skillPos" })
+        } else if (boton.classList.contains("dos")) {
+            const sobreMiElement = document.getElementById("sobreMi");
+            const rect = sobreMiElement.getBoundingClientRect();
+
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                gsap.to(window, { scrollTo: "#sobreMiDown" });
+                gsap.to(".parrafoSM", { scale: 1, stagger: 1 });
+            } else {
+                gsap.to(window, { scrollTo: "#sobreMiUp" });
+                gsap.fromTo(".parrafoSM", { scale: 0 }, { scale: 1, stagger: 1 });
+            }
+        } else if (boton.classList.contains("tres")) {
+            const sobreMiElement = document.getElementById("estudios");
+            const rect = sobreMiElement.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                gsap.to(window, { scrollTo: "#estudiosDown" });
+            } else {
+                gsap.to(window, { scrollTo: "#estudiosUp" });
+            }
+        } else if (boton.classList.contains("cuatro")) {
+            gsap.to(window, { scrollTo: "#contactoPos" })
+        }
     })
 })
 
@@ -44,7 +68,10 @@ for (let i = 0; i < sectores.length; i++) {
             pin: animacionesSector[i]
         }
     })
-    sectoresTL.fromTo(animacionesSector[i], { opacity: 0 }, { duration: 2, opacity: 1 })
+
+    sectoresTL.fromTo(animacionesSector[i], { opacity: 0, visibility: "hidden" }, {
+        visibility: "visible", duration: 2, opacity: 1
+    })
 }
 
 // -------------------------- Proyectos
@@ -66,7 +93,7 @@ hddPlay.addEventListener("click", () => {
     hddAudio.play();
 });
 
-function handleMouseOver(e) {
+function handleMouseOverProject(e) {
     const tarjeta = e.currentTarget;
     if (!tarjeta.hasMouseOver) {
         tarjeta.hasMouseOver = true;
@@ -79,7 +106,7 @@ function handleMouseOver(e) {
     }
 }
 
-function handleMouseOut(e) {
+function handleMouseOutProject(e) {
     const tarjeta = e.currentTarget;
     const relatedTarget = e.relatedTarget;
 
@@ -95,30 +122,34 @@ function handleMouseOut(e) {
 }
 
 proyectos.forEach((proyecto) => {
-    proyecto.addEventListener("mouseover", handleMouseOver);
-    proyecto.addEventListener("mouseout", handleMouseOut);
+    proyecto.addEventListener("mouseover", handleMouseOverProject);
+    proyecto.addEventListener("mouseout", handleMouseOutProject);
 });
 
 // -------------------------- Skills
-
-const timelinePrincipal = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+const timelinePrincipal = gsap.timeline({ repeat: -1, repeatDelay: -2 });
 const inicioCarrousellSkills = gsap.timeline();
 const carrousellSkills = gsap.timeline();
 const finalCarrousellSkills = gsap.timeline();
+const reallyFinalCarrousellSkills = gsap.timeline();
 
-gsap.set(".skill", { opacity: 0, xPercent: -100 });
+const skillsDiv = document.getElementById("skillsContainer");
+const skillsFixed = document.getElementById("skillsFixed")
+
+gsap.set(".skill", { opacity: 0, left: "-25vw" });
 
 inicioCarrousellSkills.to(".skill", {
-    opacity: 1,
-    xPercent: 100,
-    duration: 5,
+    opacity: 0,
+    left: "0vw",
+    duration: 3,
     ease: "linear",
     stagger: 3,
     scale: 1
 });
 
 carrousellSkills.to(".skill", {
-    xPercent: 300,
+    opacity: 1,
+    left: "50vw",
     duration: 5,
     ease: "linear",
     stagger: 3,
@@ -127,15 +158,44 @@ carrousellSkills.to(".skill", {
 
 finalCarrousellSkills.to(".skill", {
     opacity: 0,
-    xPercent: 500,
-    duration: 5,
+    left: "75vw",
+    duration: 3,
     ease: "linear",
     stagger: 3,
     scale: 1
 });
 
-// Agregar las líneas de tiempo a la línea de tiempo principal
 timelinePrincipal
     .add(inicioCarrousellSkills)
-    .add(carrousellSkills, "-=23") // Asegura un retraso de 5 segundos entre la primera y la segunda
-    .add(finalCarrousellSkills, "-=23"); // Asegura un retraso de 5 segundos entre la segunda y la tercera
+    .add(carrousellSkills, "-=23")
+    .add(finalCarrousellSkills, "-=23");
+
+function handleMouseOverSkills(e) {
+    const div = e.currentTarget;
+    if (!div.hasMouseOver) {
+        div.hasMouseOver = true;
+        gsap.fromTo(skillsFixed, { xPercent: -120 }, { xPercent: 5, visibility: "visible", duration: 0.5 })
+    }
+}
+
+function handleMouseOutSkills(e) {
+    const div = e.currentTarget;
+    const hijos = e.relatedTarget;
+
+    if (div.hasMouseOver && !div.contains(hijos)) {
+        div.hasMouseOver = false;
+        gsap.to(skillsFixed, { xPercent: -120, duration: 0.5, });
+    }
+}
+
+skillsDiv.addEventListener("mouseover", handleMouseOverSkills);
+skillsDiv.addEventListener("mouseout", handleMouseOutSkills);
+
+// -------------------------- Sobre mi
+const sobreMiDiv = document.getElementById("sobreMiDescripcion");
+
+const sobreMiTL = gsap.timeline({
+    scrollTrigger: { trigger: sobreMiDiv, start: "top top", end: "bottom top", scrub: 1 }
+});
+
+sobreMiTL.fromTo(".parrafoSM", { scale: 0 }, { scale: 1, stagger: 1 })

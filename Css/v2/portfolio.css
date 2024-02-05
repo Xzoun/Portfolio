@@ -8,8 +8,9 @@
 }
 
 body {
-    height: 600vh;
+    height: 500vh;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .sector {
@@ -20,12 +21,25 @@ body {
 .home {
     padding: 10vh 15vw 0 15vw;
     max-height: 90vh;
+    min-height: 89vh;
     overflow: hidden;
 }
 
 .general {
     padding-left: 20vw;
     padding-right: 20vw;
+}
+
+.subtitulo {
+    display: flex;
+    gap: 1vw;
+}
+
+.subtitulo img,
+#descargarBtn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(96%) sepia(19%) saturate(4131%) hue-rotate(300deg) brightness(122%) contrast(125%);
 }
 
 /* ------------------------------- Inicio Smooth | Background */
@@ -86,31 +100,6 @@ html {
     justify-content: center;
 }
 
-/* ------------------------------- Portfolio v.1 */
-#v1 {
-    background: radial-gradient(circle, rgb(255, 249, 172) 0%,
-            rgb(255, 249, 172, 0.3) 32%,
-            rgb(255, 249, 172, 0.6) 50%,
-            rgb(255, 249, 172)100%);
-    padding: 2px;
-    width: fit-content;
-    border-radius: 8px;
-    font-weight: 800;
-    position: absolute;
-    right: 5vw;
-
-}
-
-#v1 a {
-    text-decoration: none;
-    color: black;
-}
-
-#v1:hover {
-    scale: 1.2;
-
-}
-
 /* ------------------------------- Tarjeta */
 .cardProject {
     min-width: 20vw;
@@ -123,7 +112,6 @@ html {
     padding: 1vh 1vw;
     max-height: 50vh;
 }
-
 
 /* ------------------------------- Descripción | Nombre | Foto */
 .descripcionProject {
@@ -154,7 +142,6 @@ html {
     align-items: center;
     justify-content: center;
     gap: 2vw;
-    overflow: hidden;
 }
 
 .linkProject {
@@ -163,6 +150,7 @@ html {
     border-radius: 8px;
     border: 3px solid black;
     color: black;
+    padding: 5px;
 }
 
 .linkGitHubProject {
@@ -191,7 +179,85 @@ a:hover,
     cursor: pointer;
 }
 
+/*------------------------------------------ Responsive ------------------------------------------*/
+@media (min-width:1300px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cardProject {
+        min-width: 30vw;
+        padding: 1vh 1vw;
+        max-height: 70vh;
+    }
+
+    .playBtn {
+        border: solid black 3px;
+    }
+
+    .playBtn img,
+    .playBtn {
+        height: 45px;
+        width: 45px;
+    }
+
+    .subtitulo img {
+        width: 45px;
+        height: 45px;
+
+    }
+}
+
+@media (max-height:800px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    .subtitulo img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width:1299px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cardProject {
+        min-width: 30vw;
+        padding: 1vh 1vw;
+        max-height: 70vh;
+    }
+
+    .playBtn {
+        border: solid black 3px;
+    }
+
+    .playBtn img,
+    .playBtn {
+        height: 45px;
+        width: 45px;
+    }
+}
+
 @media (max-width: 796px) {
+
+    /* ------------------------------- General ------------------------------- */
+    body {
+        font-size: 1rem;
+    }
+
     .general {
         padding-left: 5vw;
         padding-right: 5vw;
@@ -199,10 +265,45 @@ a:hover,
 
     .animacionSector,
     .home {
-        padding: 10vh 5vw 0 5vw;
-        max-height: 90vh;
-        overflow: hidden;
+        padding: 3vh 5vw 0 5vw;
+        max-height: 95vh;
+        overflow: visible;
     }
 
+    .subtitulo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ------------------------------- Proyectos ------------------------------- */
+    #proyectos {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardProject {
+        max-height: 45vh;
+    }
+
+    /* ------------------------------- Portfolio v.1 */
+    #v1Link {
+        top: 100vh;
+    }
+
+    /* ------------------------------- Tarjeta */
+    .cardProject {
+        max-height: 40vh;
+    }
+
+    /* ------------------------------- Link */
+
+    a,
+    .playBtn {
+        scale: 0.8;
+    }
 
 }

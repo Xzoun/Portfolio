@@ -42,17 +42,20 @@
 }
 
 .logo:hover {
-    filter: invert(1);
-    background-color: white;
+    background-color: rgba(66, 64, 64, 0.452);
+}
 
+.logo:hover img {
+    filter: invert(96%) sepia(19%) saturate(4131%) hue-rotate(300deg) brightness(122%) contrast(125%);
 }
 
 .span {
     position: absolute;
     width: fit-content;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(66, 64, 64, 0.452);
     visibility: hidden;
     padding: 10px;
+    color: rgb(255, 249, 172);
     width: max-content;
     border-radius: 12px;
 }
@@ -60,6 +63,21 @@
 .logo:hover .span {
     visibility: visible;
     top: -55px;
+}
+
+/*------------------------------------------ Responsive ------------------------------------------*/
+@media (min-width:1300px) {
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-height:800px) {
+    .logo img {
+        height: 35px;
+        width: 35px;
+    }
 }
 
 @media (max-width : 768px) {
@@ -74,15 +92,19 @@
         gap: 0rem;
     }
 
-    .logo:hover span {
-        visibility: visible;
-        left: -15vw;
+    .logo:hover .span {
+        display: none;
+        visibility: hidden;
         top: auto;
+        border-radius: 50%;
     }
 
     #controlador h2 {
         visibility: hidden;
     }
-
+    .logo img {
+        height: 25px;
+        width: 25px;
+    }
 
 }

@@ -1,9 +1,14 @@
 /* ------------------- Tecnologías */
-div.skills {
-    padding: 10vh 10vw;
-    overflow: hidden;
-    position: relative;
+#tecnologias {
+    padding: 0 5vw;
+    width: 60vw;
+}
+
+#skillsContainer {
+    padding: 5vh 10vw;
     height: 60px;
+    position: relative;
+    overflow: hidden;
 }
 
 div.skill {
@@ -13,40 +18,171 @@ div.skill {
     justify-content: center;
     position: absolute;
     width: 10vw;
-    top: 20vh;
+    top: 5vh;
     opacity: 0;
 }
 
+
 div.skill img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
+}
+
+/* ------------------- Fixed */
+#skillsFixed {
+    visibility: hidden;
+    position: fixed;
+    background: white;
+    border-radius: 8px;
+    bottom: 5vh;
+    left: 0vw;
+    width: 15vw;
+    padding: 1vh 1vw 1vh 0vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillFixed {
+    display: flex;
+    align-items: center;
+    gap: 10vh;
+}
+
+.skillFixed img {
+    width: 20px;
+    height: 20px;
 }
 
 /* ------------------- Otras Skills */
 #otrasSkills {
-    padding: 10vh 10vw;
+    padding: 10vh 5vw;
     display: flex;
-    width: 40vw;
     justify-content: space-between;
-    gap: 10vw;
+    gap: 5px;
+    width: 60vw;
 }
 
 div.otrasSkills {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    gap: 20px;
+    padding-top: 5vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2vh 2vw;
+    width: 30vw;
 }
 
 div.otraSkill {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
-    justify-content: center;
-    width: 20vw;
+    justify-content: space-between;
 }
 
 div.otrasSkills img {
-    width: 40px;
+    height: 25px;
+}
+
+/*------------------------------------------ Responsive ------------------------------------------*/
+@media (min-width:1300px) {
+    div.skill img {
+        width: 70px;
+        height: 70px;
+    }
+
+    div.otrasSkills img {
+        height: 70px;
+    }
+
+    #skillsContainer {
+        height: 80px;
+    }
+
+    #skillsFixed {
+        width: 20vw;
+        border-radius: 16px;
+    }
+
+    .skillFixed img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-height:800px) {
+    div.skill img {
+        width: 45px;
+        height: 45px;
+    }
+
+    div.skill img {
+        height: 45px;
+        width: 45px;
+    }
+
+    div.otrasSkills img {
+        height: 30px;
+    }
+}
+
+@media (max-width:796px) {
+
+    /* ------------------- Tecnologías */
+    div.skills {
+        padding-top: 5vh;
+        padding: 0vh 5vw auto 5vw;
+        margin-top: 0;
+        width: 70vw;
+    }
+
+    #tecnologias {
+        padding-top: 5vh;
+    }
+
+    #skillsContainer {
+        padding-top: 5vh;
+        width: 50vw;
+    }
+
+    /* ------------------- Fixed */
+    #skillsFixed {
+        width: 40vw;
+    }
+
+    .skillFixed {
+        gap: 2vw;
+    }
+
+    .skillFixed h2 {
+        font-size: 0.8rem;
+    }
+
+    /* ------------------- Idiomas | Diseño */
+    #otrasSkills {
+        padding: 5vh 13vw;
+        margin-left: 2vw;
+        width: 50vw;
+        gap: 5px;
+        justify-content: space-around;
+    }
+
+    div.otrasSkills h4 {
+        font-size: smaller;
+    }
+
+    div.otrasSkills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    div.otrasSkills img {
+        width: 25px;
+        height: auto;
+    }
 }

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../../Css/v2/portfolio.css">
     <link rel="stylesheet" href="../../Css/v2/controlador.css">
     <link rel="stylesheet" href="../../Css/v2/skills.css">
+    <link rel="stylesheet" href="../../Css/v2/sobreMi.css">
+    <link rel="stylesheet" href="../../Css/v2/estudios.css">
+    <link rel="stylesheet" href="../../Css/v2/contactoMas.css">
 </head>
 
 <body>
@@ -17,14 +20,17 @@
     <div id="start">
 
         <div class="home" id="home">
-            <h2>Proyectos</h2>
+            <div class="subtitulo">
+                <img src="../../Imagenes/v2/controlador/home.png" alt="Home - icono casa" />
+                <h2>Proyectos</h2>
+            </div>
 
             <div class="general" id="proyectos">
 
                 <div class="cardProject hdd">
                     <div class="imgContainerProject">
                         <img class="imgProject" src="../../Imagenes/proyectos/HDDDashBoard.png"
-                            alt="Cactus Programador">
+                            alt="DashBoard | Herramienta de desarrollo">
                     </div>
                     <h3 class="nombreProject">Herramienta de Desarrollo</h3>
                     <div class="linkContainerProject">
@@ -40,7 +46,7 @@
                 <div class="cardProject">
                     <div class="imgContainerProject">
                         <img class="imgProject" target="_blank" src="../../Imagenes/proyectos/SADashBoard.png"
-                            alt="Cactus Programador">
+                            alt="DashBoard | Simplemente Algo">
                     </div>
                     <div>
                         <h3 class="nombreProject">Simplemente Algo!</h3>
@@ -55,69 +61,75 @@
                     </div>
                 </div>
             </div>
-
-            <div id="v1"><a href="../v1.html">Portfolio V.1</a></div>
         </div>
 
         <div class="sector" id="skills">
-            <div class="animacionSector">
-                <h2>Skills</h2>
-                <div class="general skills">
+            <div class="animacionSector" id="skillPos">
+                <div class="subtitulo">
+                    <img src="../../Imagenes/v2/controlador/skills.png" alt="Skills - icono flecha ascendente" />
+                    <h2>Skills</h2>
+                </div>
+                <div id="tecnologias">
                     <h3>Tecnologías</h3>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/JavaScript.png" alt="logo JavaScript">
-                        <h2>JavaScript</h2>
-                    </div>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/Java.png" alt="logo Java">
-                        <h2>JAVA</h2>
-                    </div>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/SQL.png" alt="logo SQL">
-                        <h2>SQL</h2>
-                    </div>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/CSS3.png" alt="logo Css">
-                        <h2>CSS</h2>
-                    </div>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/HTML5.png" alt="logo Html">
-                        <h2>HTML</h2>
-                    </div>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/bootstrap.png" alt="logo Bootstrap">
-                        <h2>Bootstrap</h2>
-                    </div>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/firebase.png" alt="logo Firebase">
-                        <h2>Firebase</h2>
-                    </div>
-                    <div class="skill">
-                        <img src="../../Imagenes/tecnologias/React.png" alt="logo React">
-                        <h2>React</h2>
+                    <div id="skillsContainer">
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/JavaScript.png" alt="logo JavaScript">
+                            <h4>JavaScript</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/Java.png" alt="logo Java">
+                            <h4>JAVA</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/SQL.png" alt="logo SQL">
+                            <h4>SQL</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/CSS3.png" alt="logo Css">
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/HTML5.png" alt="logo Html">
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/bootstrap.png" alt="logo Bootstrap">
+                            <h4>Bootstrap</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/firebase.png" alt="logo Firebase">
+                            <h4>Firebase</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="../../Imagenes/tecnologias/React.png" alt="logo React">
+                            <h4>React</h4>
+                        </div>
                     </div>
                 </div>
-
                 <div id="otrasSkills" class="general">
-
-                    <div class="otrasSkills">
+                    <div>
                         <h3>Idiomas</h3>
-                        <div class="otraSkill">
-                            <img src="../../Imagenes/idiomas/argentina.png" alt="bandera Argentina">
-                            <h4>Español | Nativo</h4>
-                        </div>
-                        <div class="otraSkill">
-                            <img src="../../Imagenes/idiomas/estados unidos.png" alt="bandera Yankee">
-                            <h4>Inglés | A2</h4>
-                        </div>
-                        <div class="otraSkill">
-                            <img src="../../Imagenes/idiomas/francia.png" alt="bandera Francia">
-                            <h4>Francés | B2</h4>
+                        <div class="otrasSkills">
+
+                            <div class="otraSkill">
+                                <img src="../../Imagenes/idiomas/argentina.png" alt="bandera Argentina">
+                                <h4>Español | Nativo</h4>
+                            </div>
+                            <div class="otraSkill">
+                                <img src="../../Imagenes/idiomas/estados unidos.png" alt="bandera Yankee">
+                                <h4>Inglés | A2</h4>
+                            </div>
+
+                            <div class="otraSkill">
+                                <img src="../../Imagenes/idiomas/francia.png" alt="bandera Francia">
+                                <h4>Francés | B2</h4>
+                            </div>
                         </div>
                     </div>
+
                     <div>
+                        <h3>Diseño</h3>
                         <div class="otrasSkills">
-                            <h3>Diseño</h3>
                             <div class="otraSkill">
                                 <img src="../../Imagenes/diseño/gimp.png" alt="logo Gimp">
                                 <h4>Gimp</h4>
@@ -130,77 +142,222 @@
                     </div>
                 </div>
             </div>
-
-            <div class="sector" id="sobreMi">
-                <div class="animacionSector">
-                    <h2>Sobre mi</h2>
-                    <div class="general">
-                        <h3>asdfsdfsd</h3>
-                        <h3>sdfsdfsd</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sector" id="estudios">
-                <div class="animacionSector">
-                    <h2>Estudios</h2>
-                    <div class="general">
-                        <h3>asdfsdfsd</h3>
-                        <h3>sdfsdfsd</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sector" id="contacto">
-                <div class="animacionSector">
-                    <h2>Contacto</h2>
-                    <div class="general">
-                        <h3>asdfsdfsd</h3>
-                        <h3>sdfsdfsd</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ----------- Elemntos con posición específica ----------- -->
-            <audio id="hddAudio" class="audioProject">
-                <source type="audio/mp3" src="../../Audios/herramientaDeDesarrollo.m4a">
-            </audio>
-            <h5 id="hddDescripcion" class="descripcionProject">
-                En Herramienta de desarrollo podrás encontrar mis primeros proyectos, como juegos, notas
-                integradas, muro de comentarios y permite un rápido acceso tanto a cursos como a documentación y
-                a herramientas útiles que estan disponibles en la web.
-            </h5>
-            <audio id="saAudio" class="audioProject">
-                <source type="audio/mp3" src="../../Audios/simplementeAlgo.m4a">
-            </audio>
-            <h5 id="saDescripcion" class="descripcionProject">
-                Simplemente Algo! es un audiolibro interactivo, es decir, que podrás
-                tomar decisiones por los protagonistas de la historia.
-                Actualmente se encuentra en desarrollo.
-            </h5>
-
-            <div id="controlador">
-                <a href="#" class="logo"><img src="../../Imagenes/v2/controlador/home.png" alt="Home - icono casa"><span
-                        class="span">Inicio</span></a>
-                <h2>|</h2>
-                <a href="#skills" class="logo"><img src="../../Imagenes/v2/controlador/skills.png"
-                        alt="Skills - icono boost"><span class="span">Skills</span></a>
-                <h2>|</h2>
-                <a href="#sobreMi" class="logo"><img src="../../Imagenes/v2/controlador/perfil.png"
-                        alt="Sobre mi - icono perfil"><span class="span">Sobre mi</span></a>
-                <h2>|</h2>
-                <a href="#estudios" class="logo"><img src="../../Imagenes/v2/controlador/educacion.png"
-                        alt="Estudios - icono libro"><span class="span">Estudios</span></a>
-                <h2>|</h2>
-                <a href="#contacto" class="logo"><img src="../../Imagenes/v2/controlador/contacto.png"
-                        alt="Contacto - icono teléfono"><span class="span">Contacto</span></a>
-            </div>
-
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-        <script src="../../JavaScript/v2/portfolio.js"></script>
+
+        <div class="sector sectorSM" id="sobreMi">
+            <div class="animacionSector" id="sobreMiUp">
+
+                <div class="subtitulo">
+                    <img src="../../Imagenes/v2/controlador/perfil.png" alt="Sobre mi - icono perfil" />
+                    <h2>Sobre mi</h2>
+                </div>
+
+                <div class="general" id="sobreMiDescripcion">
+
+                    <p class="parrafoSM">Soy un apasionado del aprendizaje constante, estoy emocionado por compartir mi
+                        viaje en el mundo del desarrollo web y programación. Actualmente, estoy inmerso en una carrera
+                        como programador universitario y me encuentro realizando el curso ONE de Alura con Oracle, donde
+                        tengo la oportunidad de continuar avanzando en el emocionante mundo de la tecnología.</p>
+
+                    <p class="parrafoSM" id="sobreMiDown">A lo largo de mi trayecto de aprendizaje, he trabajado en
+                        diversos proyectos utilizando Java y JavaScript. En mi recorrido con Java, he abordado desafíos
+                        que me han permitido fortalecer mis habilidades y comprender cómo construir soluciones robustas
+                        y escalables representando paradigmas de la vida cotidiana. Además, estoy emocionado de
+                        presentar una serie de proyectos personales realizados en JavaScript, los cuales estarán
+                        disponibles en la sección de proyectos.
+                    </p>
+
+                    <p class="parrafoSM">Mi enfoque va más allá de la mera codificación; busco construir soluciones
+                        creativas y
+                        eficientes que resuelvan problemas reales. Cada línea de código es un paso hacia la creación de
+                        experiencias excepcionales para los usuarios y la materialización de ideas innovadoras.</p>
+
+                    <h3 class="parrafoSM">Le Benitez! | Desarrollador en Formación</h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sector" id="estudios">
+            <div class="animacionSector">
+
+                <div class="subtitulo">
+                    <img src="../../Imagenes/v2/controlador/educacion.png" alt="Estudios - icono libro" />
+                    <h2>Estudios</h2>
+                </div>
+                <div class="subsectorGeneral">
+                    <h3><img src="../../Imagenes/v2/graduado.png" class="birrete" alt="Estudios - birrete" />Cursos
+                        Certificados</h3>
+                    <div class="subSectorCursos">
+                        <button id="izquierda" class="botonesCarrousel"><img src="../../Imagenes/v2/play.png"
+                                alt="flecha izquierda"></button>
+                        <div id="scrollCursos">
+                            <div id="carrouselCursos">
+                                <div class="cardCurso" id="one">
+                                    <h4 class="cardCursoTitulo">Programador</h4>
+                                    <h5 class="cardCursoInstitucion">ONE | Alura y Oracle</h5>
+                                    <h6 class="cardCursoEstado">En curso</h6>
+                                </div>
+                                <div class="cardCurso" id="dos">
+                                    <h4 class="cardCursoTitulo">Programador Java Intermedio</h4>
+                                    <h5 class="cardCursoInstitucion">UTN | Argentina Programa 4.0</h5>
+                                    <h6 class="cardCursoEstado">Terminado</h6>
+                                </div>
+                                <div class="cardCurso" id="tres">
+                                    <h4 class="cardCursoTitulo">Programador Full Stack</h4>
+                                    <h5 class="cardCursoInstitucion">EGG Coop | Argentina Programa 4.0</h5>
+                                    <h6 class="cardCursoEstado">Terminado</h5>
+                                        <div id="cursoLinks">
+                                            <a class="linkProject" target="_blank"
+                                                href="https://xzoun.github.io/Guia-FrontEnd/">https://</a>
+                                            <a href="https://github.com/Xzoun/Full-Stack-4.0" target="_blank"><img
+                                                    id="gitCurso" src="../../Imagenes/tecnologias/gitHub.png"
+                                                    alt="Logo Git Hub" /></a>
+                                        </div>
+                                </div>
+                                <div class="cardCurso" id="estudiosUp">
+                                    <h4 class="cardCursoTitulo">Desarrollador Web Jr</h4>
+                                    <h5 class="cardCursoInstitucion">Egg Coop</h5>
+                                    <h6 class="cardCursoEstado">Terminado</h6>
+                                </div>
+                                <div class="cardCurso">
+                                    <h4 class="cardCursoTitulo">Diseño Gráfico Digital</h4>
+                                    <h5 class="cardCursoInstitucion">UTN | B.A. Multiplica 2.0</h5>
+                                    <h6 id="estudiosDown" class="cardCursoEstado">Terminado</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="derecha" class="botonesCarrousel"><img src="../../Imagenes/v2/play.png"
+                                alt="flecha derecha"></button>
+                    </div>
+
+                    <h3> <img src="../../Imagenes/v2/graduado.png" class="birrete" alt="Estudios - birrete" />Carrera
+                        Universitaria</h3>
+
+                    <div class="subSectorCarrera">
+                        <div class="cardCurso">
+                            <h4 class="cardCursoTitulo">Programador Universitario</h4>
+                            <h5 class="cardCursoInstitucion">UNSE</h5>
+                            <h6 class="cardCursoEstado">En curso</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sector" id="contacto">
+            <div class="animacionSector">
+
+                <div class="subtitulo">
+                    <img src="../../Imagenes/v2/controlador/contacto.png" alt="Contacto - icono teléfono" />
+                    <h2>Contacto</h2>
+                </div>
+
+                <div class="general contacto">
+                    <h4>Te invito a utilizar cualquiera de estos links para comunicarte conmigo</h4>
+                    <div id="linksContacto">
+                        <a href="https://api.whatsapp.com/send/?phone=541136719834&text&type=phone_number&app_absent=0"
+                            target="_blank"><img id="whatsapp" src="../../Imagenes/redes/WhatsApp.png"
+                                alt="Logo WhatsApp"></a>
+                        <a href="https://www.linkedin.com/in/leobenitez/" target="_blank"><img id="linkedin"
+                                src="../../Imagenes/redes/Linkedin.png" alt="Logo Linkedin"></a>
+                    </div>
+                    <h4>Más</h4>
+                    <div id="linksMas">
+                        <a id="certificados" target="_blank"
+                            href="https://photos.google.com/share/AF1QipOw6oc7I8xZUWzsbZIwTO93Y-qVOzLsC_Rg8rc5mlq_Nr3d7un9oDF1d_b7HaAb1w?pli=1&key=ek0zOGRReWZKMUVaQVdZYWkzc0VSYmZqejJCMzB3">Certificados</a>
+                        <a id="v1Link" target="_blank" href="../v1.html">Portfolio V.1 </a>
+                        <a target="_blank" id="descargarBtn" download="CV | LeBenitez! | PDF"
+                            href="../../Imagenes/Perfil/CVLeoBenitez.pdf"> Descargar CV </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contactoPos"></div>
+        <!-- ----------- Elemntos con posición específica ----------- -->
+
+        <!-- ------ Proyectos-->
+        <audio id="hddAudio" class="audioProject">
+            <source type="audio/mp3" src="../../Audios/herramientaDeDesarrollo.m4a">
+        </audio>
+
+        <h5 id="hddDescripcion" class="descripcionProject">
+            En Herramienta de desarrollo podrás encontrar mis primeros proyectos, como juegos, notas
+            integradas, muro de comentarios y permite un rápido acceso tanto a cursos como a documentación y
+            a herramientas útiles que estan disponibles en la web.
+        </h5>
+
+        <audio id="saAudio" class="audioProject">
+            <source type="audio/mp3" src="../../Audios/simplementeAlgo.m4a">
+        </audio>
+
+        <h5 id="saDescripcion" class="descripcionProject">
+            Simplemente Algo! es un audiolibro interactivo, es decir, que podrás
+            tomar decisiones por los protagonistas de la historia.
+            Actualmente se encuentra en desarrollo.
+        </h5>
+
+        <!-- ------ Skills-->
+        <div id="skillsFixed">
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/JavaScript.png" alt="logo JavaScript">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/Java.png" alt="logo Java">
+                <h2>JAVA</h2>
+            </div>
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/SQL.png" alt="logo SQL">
+                <h2>SQL</h2>
+            </div>
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/CSS3.png" alt="logo Css">
+                <h2>CSS</h2>
+            </div>
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/HTML5.png" alt="logo Html">
+                <h2>HTML</h2>
+            </div>
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/bootstrap.png" alt="logo Bootstrap">
+                <h2>Bootstrap</h2>
+            </div>
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/firebase.png" alt="logo Firebase">
+                <h2>Firebase</h2>
+            </div>
+            <div class="skillFixed">
+                <img src="../../Imagenes/tecnologias/React.png" alt="logo React">
+                <h2>React</h2>
+            </div>
+        </div>
+
+        <!-- ------ Nav-->
+        <div id="controlador">
+            <a href="#" class="logo"><img src="../../Imagenes/v2/controlador/home.png" alt="Home - icono casa"><span
+                    class="span">Inicio</span></a>
+            <h2>|</h2>
+            <a href="#" class="logo uno"><img src="../../Imagenes/v2/controlador/skills.png"
+                    alt="Skills - icono flecha ascendente"><span class="span">Skills</span></a>
+            <h2>|</h2>
+            <a href="#" class="logo dos"><img src="../../Imagenes/v2/controlador/perfil.png"
+                    alt="Sobre mi - icono perfil"><span class="span">Sobre mi</span></a>
+            <h2>|</h2>
+            <a href="#" class="logo tres"><img src="../../Imagenes/v2/controlador/educacion.png"
+                    alt="Estudios - icono libro"><span class="span">Estudios</span></a>
+            <h2>|</h2>
+            <a href="#" class="logo cuatro"><img src="../../Imagenes/v2/controlador/contacto.png"
+                    alt="Contacto - icono teléfono"><span class="span">Contacto</span></a>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="../../JavaScript/v2/portfolio.js"></script>
+    <script src="../../JavaScript/v2/carrousel.js"></script>
 </body>
 
 </html>

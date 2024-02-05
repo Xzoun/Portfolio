@@ -1,0 +1,115 @@
+.subsectorGeneral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* ----------------- Subtitulo */
+.subsectorGeneral h3 {
+    align-self: flex-start;
+    padding: 0vh 2vw;
+}
+
+.birrete {
+    filter: invert(96%) sepia(19%) saturate(4131%) hue-rotate(300deg) brightness(122%) contrast(125%);
+}
+
+/* ----------------- Carrousell */
+.subSectorCursos {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    width: 90%;
+    margin: 0;
+    height: 150px;
+    border-radius: 16px;
+
+}
+
+#scrollCursos {
+    overflow-x: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+#scrollCursos::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#carrouselCursos {
+    width: 500%;
+    display: flex;
+    left: 10%;
+    height: 100%;
+}
+
+/* -------- Botones */
+.botonesCarrousel {
+    width: 10%;
+    cursor: pointer;
+    background: radial-gradient(circle, rgb(255, 249, 172) 0%,
+    rgb(255, 249, 172, 0.3) 32%,
+    rgb(255, 249, 172, 0.6) 50%,
+    rgb(255, 249, 172)100%);
+    border: none;
+    height: 50%;
+    border-radius: 8px;
+}
+
+.botonesCarrousel img {
+    width: 40%;
+}
+
+.botonesCarrousel:hover img {
+    scale: 1.2;
+}
+
+#izquierda {
+    rotate: 180deg;
+}
+
+/* -------- Elementos */
+.cardCurso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    border-radius: 8px;
+}
+
+#cursoLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#gitCurso {
+    height: 30px;
+    width: 30px;
+}
+
+#gitCurso:hover {
+    scale: 1.5;
+}
+
+/* ----------------- Carrera */
+.subSectorCarrera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------- Responsive */
+@media (max-width: 796px) {
+    .subSectorCursos {
+        width: 70%;  
+        height: 50vh;
+    }
+}

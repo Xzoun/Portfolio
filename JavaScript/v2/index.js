@@ -239,23 +239,43 @@ for (let i = 0; i < posiciones.length - 1; i++) {
     }
 }
 
-/* -------------------------- Animación -------------------------- */
+/* -------------------------- Fondo -------------------------- */
 
 const timelineBolas = gsap.timeline();
 
+/* -------- Inicio Automático */
+const bienvenida = document.getElementById('bienvenidaH2');
+const fotoPerfil = document.getElementById("perfil");
+const fondo = document.getElementById("fondo");
+const fondoPresentacion = document.getElementById("presentacion");
+
 timelineBolas
-    .to(".bola0", { duration: 1, opacity: 1, delay: 0.5, delay: 0.5 })
-    .to(".bola1", { duration: 1, opacity: 1 })
-    .to(".bola2", { duration: 1, opacity: 1 })
-    .to(".bola3", { duration: 1, opacity: 1 }, "-=0.2")
-    .to(".bola4", { duration: 1, opacity: 1 }, "+=1")
-    .to(".bola5", { duration: 1, opacity: 1 }, "+=1")
-    .to(".bola6", { duration: 1, opacity: 1 }, "+=1")
-    .to(".bola7", { duration: 1, opacity: 1 }, "-=3")
-    .to(".bola8", { duration: 1, opacity: 1 }, "-=2")
-    .to(".bola9", { duration: 1, opacity: 1 }, "+=1")
-    .to(".bola10", { duration: 1, opacity: 1 }, "-=2")
-    .to(".bola11", { duration: 1, opacity: 1 }, "-=2");
+    .to(".bola0", { duration: 0.5, opacity: 1, delay: 1 })
+    .to(".bola1", { duration: 0.5, opacity: 1 })
+    .to(".bola2", { duration: 0.5, opacity: 1 })
+    .to(".bola3", { duration: 0.5, opacity: 1 }, "-=0.2")
+    .to(".bola4", { duration: 0.5, opacity: 1 }, "+=0.5")
+    .to(".bola5", { duration: 0.5, opacity: 1 }, "+=0.5")
+    .to(".bola6", { duration: 0.5, opacity: 1 }, "+=0.5")
+    .to(".bola7", { duration: 0.5, opacity: 1 }, "-=1.5")
+    .to(".bola8", { duration: 0.5, opacity: 1 }, "-=1")
+    .to(".bola9", { duration: 0.5, opacity: 1 }, "+=0.5")
+    .to(".bola10", { duration: 0.5, opacity: 1 }, "-=1")
+    .to(".bola11", { duration: 0.5, opacity: 1 }, "-=1")
+    .to(".button", { duration: 0.5, opacity: 0, stagger: { each: 1, from: "end" } })
+    .to(bienvenida, { duration: 0.5, opacity: 0, }, "-=0.25")
+    .to(fotoPerfil, { duration: 0.5, opacity: 0, }, "-=0.5")
+
+    .to(fondoPresentacion, {
+        background: "radial-gradient(circle,rgba(0, 0, 0, 0.2) 70%,rgba(0, 0, 0, 0.1) 100%);", duration: 0.5,
+
+    }, "-=1")
+    .to(fondo, {
+        duration: 0.5, opacity: 1,
+        onComplete: () => {
+            window.location.href = "./rutas/v2/v2.html";
+        }
+    })
 
 const lineas = document.querySelectorAll('.linea');
 const timeline = gsap.timeline();
@@ -264,35 +284,35 @@ lineas.forEach((linea) => {
     const longitud = linea.getTotalLength();
 
     gsap.set(linea, { strokeDasharray: longitud, strokeDashoffset: longitud });
-    timeline.to(linea, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 1 });
+    timeline.to(linea, { duration: 0.5, strokeDashoffset: 0, ease: "power1.inOut", delay: 0.5 });
 });
 
 const bifurcacion = document.querySelector('.bifurcacion');
 const longitud1 = bifurcacion.getTotalLength();
 gsap.set(bifurcacion, { strokeDasharray: longitud1, strokeDashoffset: longitud1 });
-gsap.to(bifurcacion, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 3 });
+gsap.to(bifurcacion, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 1.5 });
 
 const bifuracion2 = document.querySelector('.bifurcacion2');
 const longitud2 = bifuracion2.getTotalLength();
 gsap.set(bifuracion2, { strokeDasharray: longitud2, strokeDashoffset: longitud2 });
-gsap.to(bifuracion2, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 7 });
+gsap.to(bifuracion2, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 3.5 });
 
 const bifurcacion2Linea = document.querySelector('.bifurcacion2Linea');
 const longitud3 = bifurcacion2Linea.getTotalLength();
 gsap.set(bifurcacion2Linea, { strokeDasharray: longitud3, strokeDashoffset: longitud3 });
-gsap.to(bifurcacion2Linea, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 8 });
+gsap.to(bifurcacion2Linea, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 4 });
 
 const bifuracion3 = document.querySelector('.bifurcacion3');
 const longitud4 = bifuracion3.getTotalLength();
 gsap.set(bifuracion3, { strokeDasharray: longitud4, strokeDashoffset: longitud4 });
-gsap.to(bifuracion3, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 9 });
+gsap.to(bifuracion3, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 4.5 });
 
 const bifurcacion3Linea = document.querySelector('.bifurcacion3Linea');
 const longitud5 = bifurcacion3Linea.getTotalLength();
 gsap.set(bifurcacion3Linea, { strokeDasharray: longitud5, strokeDashoffset: longitud5 });
-gsap.to(bifurcacion3Linea, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 10 });
-/* -------------------------- Conversor -------------------------- */
+gsap.to(bifurcacion3Linea, { duration: 1, strokeDashoffset: 0, ease: "power1.inOut", delay: 5 });
 
+/* ----------- Conversor */
 function pixelsToVW(pixels) {
     const windowWidthInPixels = window.innerWidth;
     const vwValue = (pixels / windowWidthInPixels) * 100;
@@ -304,4 +324,63 @@ function pixelsToVH(pixels) {
     const vhValue = (pixels / windowHeightInPixels) * 100;
     return vhValue;
 }
+
+// ---------------------------- Presentacion ---------------------------- //
+const tlPresentacion = gsap.timeline();
+const hola = document.getElementById('hola');
+const miNombreEs = document.getElementById('miNombreEs');
+const nombre = document.getElementById('nombre');
+
+// ---------- Iniciar ---------- //
+const iniciar = document.getElementById('iniciar');
+const tliniciar = gsap.timeline();
+
+
+// ---------- Animacion | Presentacion //
+tlPresentacion
+    .to(hola, {
+        opacity: 0, delay: 1, duration: 1, scale: 10,
+        onComplete: () => {
+            hola.style.display = "none";
+        }
+    })
+    .to(".button", { opacity: 1, duration: 0.5, stagger: 0.5 })
+    .fromTo(miNombreEs, { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1")
+    .fromTo(nombre, { opacity: 0 }, { opacity: 1, scale: 1.2, duration: 1 }, "-=0.5")
+    .fromTo(bienvenida, { opacity: 0 },
+        {
+            opacity: 1, duration: 1,
+            onComplete: () => {
+                gsap.to(miNombreEs, { opacity: 0, duration: 1 })
+                gsap.to(nombre, { opacity: 0, duration: 1, delay: 0.75 })
+            }
+        })
+    .fromTo(fotoPerfil, { opacity: 0, xPercent: -10, yPercent: 80, scale: 0.5 },
+        { opacity: 1, scale: 1.8, xPercent: 40, yPercent: 20, duration: 0.5 }, "-=1")
+
+
+// ---------- Animacion | Iniciar //
+
+
+iniciar.addEventListener("click", () => {
+    iniciar.style.cursor = "auto";
+    document.getElementById("descargarBtn").style.cursor = "auto";
+    tliniciar
+        .to(".button", { opacity: 0, duration: 1, stagger: { each: 1, from: "end" } })
+        .to(bienvenida, { opacity: 0, duration: 1 }, "-=4")
+        .to(fotoPerfil, { opacity: 0, duration: 1 }, "-=1.5")
+        .to(nombre, { opacity: 0, duration: 1 }, "-=1.5")
+        .to(miNombreEs, { opacity: 0, duration: 1 }, "-=1.5")
+
+        .to(fondoPresentacion, {
+            background: "radial-gradient(circle,rgba(0, 0, 0, 0.2) 70%,rgba(0, 0, 0, 0.1) 100%);", duration: 1,
+
+        }, "-=1")
+        .to(fondo, {
+            duration: 1, opacity: 1,
+            onComplete: () => {
+                window.location.href = "./rutas/v2/v2.html";
+            }
+        }, "-=0.5")
+}, { once: true })
 
